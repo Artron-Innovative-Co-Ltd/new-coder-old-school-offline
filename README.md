@@ -1,6 +1,6 @@
-# microBlock IDE (Offline version)
+# NewCoder Old School (Offline version)
 
-Offline version of microBlock IDE
+Offline version of NewCoder Old School
 
 ## Using
 
