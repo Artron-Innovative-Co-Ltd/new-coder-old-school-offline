@@ -41,7 +41,7 @@ function createWindow() {
             nodeIntegration: true,
             partition
         },
-        icon: path.join(__dirname, "new-coder-old-school/favicon.png")
+        icon: path.join(__dirname, "build/favicon.png")
     })
     // global.sharedObj.mainWin.loadFile("microBlock-IDE/index.html");
     global.sharedObj.mainWin.loadURL("microblock://./index.html");
