@@ -9,7 +9,7 @@ global.sharedObj = {
     mainWin: null,
     dashboardWin: null,
     extensionDir: path.normalize(`${__dirname}/extension`),
-	rootPath: path.normalize(`${__dirname}/microBlock-IDE`),
+	rootPath: path.normalize(`${__dirname}/new-coder-old-school`),
 };
 
 protocol.registerSchemesAsPrivileged([
@@ -29,7 +29,7 @@ function createWindow() {
 
     ses.protocol.registerFileProtocol('microblock', (request, callback) => {
         const url = request.url.substr(13);
-        callback({ path: path.normalize(`${__dirname}/microBlock-IDE/${url}`) })
+        callback({ path: path.normalize(`${__dirname}/new-coder-old-school/${url}`) })
     });
 
     
@@ -41,7 +41,7 @@ function createWindow() {
             nodeIntegration: true,
             partition
         },
-        icon: path.join(__dirname, "microBlock-IDE/favicon.png")
+        icon: path.join(__dirname, "new-coder-old-school/favicon.png")
     })
     // global.sharedObj.mainWin.loadFile("microBlock-IDE/index.html");
     global.sharedObj.mainWin.loadURL("microblock://./index.html");
@@ -71,10 +71,10 @@ ipcMain.on("show-dashboard", (event) => {
         webPreferences: {
             nodeIntegration: true
         },
-        icon: path.join(__dirname, "microBlock-IDE/favicon.png")
+        icon: path.join(__dirname, "new-coder-old-school/favicon.png")
     });
 
-    global.sharedObj.dashboardWin.loadFile("microBlock-IDE/dashboard/index.html");
+    global.sharedObj.dashboardWin.loadFile("new-coder-old-school/dashboard/index.html");
 
     // global.sharedObj.dashboardWin.maximize();
 
