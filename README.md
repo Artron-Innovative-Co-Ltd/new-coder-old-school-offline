@@ -6,7 +6,10 @@ Offline version of NewCoder Old School
 
 ```bash
 # Clone project
-git clone --recurse-submodules https://github.com/microBlock-IDE/microBlock-IDE-offline.git
+git clone --recurse-submodules https://github.com/Artron-Innovative-Co-Ltd/new-coder-old-school-offline.git
+
+# Enter to app dir
+cd new-coder-old-school-offline
 
 # Install electron-rebuild
 npm install --save-dev electron-rebuild
