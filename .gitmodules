@@ -1,4 +1,4 @@
 [submodule "new-coder-old-school"]
-	path = microBlock-IDE
+	path = new-coder-old-school
 	url = https://github.com/Artron-Innovative-Co-Ltd/new-coder-old-school
 	branch = master
