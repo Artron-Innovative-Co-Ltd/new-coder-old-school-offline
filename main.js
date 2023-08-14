@@ -14,7 +14,7 @@ global.sharedObj = {
 
 protocol.registerSchemesAsPrivileged([
     { 
-        scheme: 'microblock', 
+        scheme: 'newcoder', 
         privileges: { 
             standard: true, 
             supportFetchAPI: true, 
@@ -24,11 +24,11 @@ protocol.registerSchemesAsPrivileged([
 ]);
 
 function createWindow() {
-    const partition = 'persist:microblock';
+    const partition = 'persist:newcoder';
     const ses = session.fromPartition(partition);
 
-    ses.protocol.registerFileProtocol('microblock', (request, callback) => {
-        const url = request.url.substr(13);
+    ses.protocol.registerFileProtocol('newcoder', (request, callback) => {
+        const url = request.url.substr(11);
         callback({ path: path.normalize(`${__dirname}/new-coder-old-school/${url}`) })
     });
 
@@ -41,10 +41,10 @@ function createWindow() {
             nodeIntegration: true,
             partition
         },
-        icon: path.join(__dirname, "build/favicon.png")
+        icon: path.join(__dirname, "new-coder-old-school/icon.png")
     })
-    // global.sharedObj.mainWin.loadFile("microBlock-IDE/index.html");
-    global.sharedObj.mainWin.loadURL("microblock://./index.html");
+    // global.sharedObj.mainWin.loadFile("newcoder-IDE/index.html");
+    global.sharedObj.mainWin.loadURL("newcoder://./index.html");
     global.sharedObj.mainWin.maximize();
 
     // Open the DevTools.
