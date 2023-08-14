@@ -71,7 +71,7 @@ ipcMain.on("show-dashboard", (event) => {
         webPreferences: {
             nodeIntegration: true
         },
-        icon: path.join(__dirname, "new-coder-old-school/favicon.png")
+        icon: path.join(__dirname, "build/favicon.png")
     });
 
     global.sharedObj.dashboardWin.loadFile("new-coder-old-school/dashboard/index.html");
